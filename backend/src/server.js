@@ -130,42 +130,22 @@ app.get("/api/repeater-report-exists", async (req, res) => {
   // The external URL for the repeater report
   const reportUrl = `https://audio.stickerburr.net/files/${month}_${year}/index.html`;
 
-  try {
-    const response = await fetch(reportUrl, { method: "HEAD" });
-    // Using a HEAD request is a performance optimization, as it only gets headers
-    // and doesn't download the full file content to check for existence.
-
-    if (response.ok) {
-      // `response.ok` is true for status codes 200-299
-      res.status(200).json({ exists: true, url: reportUrl });
-    } else if (response.status === 404) {
-      res
-        .status(200)
-        .json({ exists: false, url: reportUrl, message: "File not found." });
-    } else {
-      console.error(
-        `Error checking report ${reportUrl}: Status ${response.status}`
-      );
-      res
-        .status(500)
-        .json({
-          exists: false,
-          url: reportUrl,
-          message: `Server error: ${response.status}`,
-        });
+    try {
+        const response = await fetch(reportUrl, { method: 'HEAD' }); // Use HEAD request for efficiency
+        // HEAD request usually returns status code without downloading full content
+        // Check if the status code indicates success (200-299 range)
+        if (response.ok) { // response.ok is true for 2xx status codes
+            res.status(200).json({ exists: true, url: reportUrl });
+        } else if (response.status === 404) {
+            res.status(200).json({ exists: false, url: reportUrl, message: 'File not found.' });
+        } else {
+            console.error(`Error checking report ${reportUrl}: Status ${response.status}`);
+            res.status(500).json({ exists: false, url: reportUrl, message: `Server error: ${response.status}` });
+        }
+    } catch (error) {
+        console.error(`Network or fetch error checking report ${reportUrl}: ${error.message}`);
+        res.status(500).json({ exists: false, url: reportUrl, message: `Network error: ${error.message}` });
     }
-  } catch (error) {
-    console.error(
-      `Network or fetch error checking report ${reportUrl}: ${error.message}`
-    );
-    res
-      .status(500)
-      .json({
-        exists: false,
-        url: reportUrl,
-        message: `Network error: ${error.message}`,
-      });
-  }
 });
 
 // --- Database Connection Test Function ---
