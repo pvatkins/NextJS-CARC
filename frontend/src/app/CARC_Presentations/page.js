@@ -77,8 +77,7 @@ export default function CARCPresentations() {
 
           <tbody>
             {presentations.map((presentation, index) => ( // Changed 'event' to 'presentation' for clarity
-              <tr key={index} className="border-b border-gray-200 hover:bg-gray-50 transition duration-150 ease-in-out">
-                {/* Corrected: Use 'presentation.Property' instead of 'presentations.Property' */}
+              <tr suppressHydrationWarning={true} key={index} className="border-b border-gray-200 hover:bg-gray-50 transition duration-150 ease-in-out">
                 <td className="py-2 px-4 text-center text-gray-800 font-medium whitespace-nowrap">{presentation.Date}</td>
                 <td className="py-2 px-4 text-left text-gray-700">{presentation.Presenter}</td>
                 <td className="py-2 px-4 text-center text-gray-700">{presentation["Call Sign"]}</td> {/* Corrected: Use 'presentation' */}
