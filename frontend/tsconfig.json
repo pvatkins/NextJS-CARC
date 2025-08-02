@@ -1,13 +1,24 @@
-
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "jsx": "preserve",
-    "noEmit": true,            // Next.js handles emitting
-    "isolatedModules": true    // Next.js requirement
+    "noEmit": true, // Next.js handles emitting
+    "isolatedModules": true // Next.js requirement
+    ,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
-
-
