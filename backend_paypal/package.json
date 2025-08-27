@@ -1,0 +1,26 @@
+{
+  "name": "paypal-standard-integration",
+  "description": "Sample Node.mjs web app to integrate PayPal Standard Checkout for online payments",
+  "version": "1.0.0",
+  "main": "server/server.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.mjs",
+    "prod": "node server/server.mjs",
+    "format": "npx prettier --write **/*.{mjs,md}",
+    "format:check": "npx prettier --check **/*.{mjs,md}",
+    "lint": "npx eslint server/*.mjs --env=node && npx eslint client/*.js --env=browser",
+    "start_prod": "pm2 start ecosystem.config.mjs --env production"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2",
+    "liquidjs": "^10.9.4",
+    "mysql": "^2.18.1",
+    "node-fetch": "^3.3.2",
+    "typescript": "^5.2.2"
+  }
+}
