@@ -80,32 +80,16 @@ export default function CARCComingEvents() {
               </tr>
             </thead>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             <tbody className="text-gray-700">
-=======
->>>>>>> 99ec977 (Updates thru 2025-07-18:17:06)
-=======
-            <tbody className="text-gray-700">
->>>>>>> 5841ee7 (Development Through 2025-07-25)
                  {Events.map((event, index) => (
                 <tr key={index} className="border-b border-gray-400 hover:bg-gray-50 transition duration-150 ease-in-out">
                   <td className="py-2 px-4 text-center text-gray-800 font-medium whitespace-nowrap">{event.Date}</td>
                   <td className="py-2 px-4 text-left text-gray-700">{event.Event}</td>
                 </tr>
-              ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
+                 ))}
             </tbody>
           </table>
-=======
-
-            </table>
->>>>>>> 99ec977 (Updates thru 2025-07-18:17:06)
-=======
-            </tbody>
-          </table>
->>>>>>> 5841ee7 (Development Through 2025-07-25)
         </div>
 
       {/* Important Note about Meetings */}
