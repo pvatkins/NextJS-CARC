@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c6afab7 (Added PayPalIntegrationNotes.docx)
+
 // frontend/src/app/CARC_Paypal_Dues/page.js
 // 
 // This component handles the frontend dues renewal form for the Coastside Amateur Radio Club.YEARLY_DUES

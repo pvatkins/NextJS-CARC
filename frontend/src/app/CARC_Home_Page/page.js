@@ -100,7 +100,7 @@ export default function CARCHomePage() {
                 >
                 CARC membership application form
                 </a>
-                and return with a Self-Addressed Stamped Envelope (✉️) to:
+                and return with a Self-Addressed Stamped Envelope to:
             </p>
             <address className="text-gray-800 text-lg font-semibold ml-8 md:ml-12 leading-relaxed">
                 Coastside Amateur Radio Club<br />

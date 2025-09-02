@@ -64,31 +64,6 @@ export default function CARCPresentations() {
       </p>
 
       {/* Dynamic Presentations Table */}
-<<<<<<< HEAD
-      // Corrected structure, removing all potential whitespace sources between table elements
-<div className="overflow-x-auto bg-white shadow-lg rounded-xl">
-  <table className="min-w-full text-left border-collapse">
-    <thead>
-      <tr className="bg-blue-600 text-white">
-        <th className="py-3 px-4 text-center font-semibold text-lg border-b border-gray-200">Date</th>
-        <th className="py-3 px-4 text-left font-semibold text-lg border-b border-gray-200">Presenter</th>
-        <th className="py-3 px-4 text-center font-semibold text-lg border-b border-gray-200">Call Sign</th>
-        <th className="py-3 px-4 text-left font-semibold text-lg border-b border-gray-200">Topic</th>
-      </tr>
-    </thead>
-    <tbody>
-      {presentations.map((presentation, index) => (
-        <tr key={index} className="border-b border-gray-200 hover:bg-gray-50 transition duration-150 ease-in-out">
-          <td className="py-2 px-4 text-center text-gray-800 font-medium whitespace-nowrap">{presentation.Date}</td>
-          <td className="py-2 px-4 text-left text-gray-700">{presentation.Presenter}</td>
-          <td className="py-2 px-4 text-center text-gray-700">{presentation["Call Sign"]}</td>
-          <td className="py-2 px-4 text-left text-gray-700">{presentation.Topic}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-</div>
-=======
       <div className="overflow-x-auto bg-white shadow-lg rounded-xl">
         <table className="min-w-full text-left border-collapse">
           <thead>
@@ -114,7 +89,6 @@ export default function CARCPresentations() {
 
         </table>
       </div>
->>>>>>> 99ec977 (Updates thru 2025-07-18:17:06)
 
       <p className="text-gray-700 leading-relaxed mt-6">
         If you have a presentation that you would like to share, please contact the CARC board.
