@@ -5,8 +5,8 @@ const path = require('path');
 const ExifParser = require('exif-parser');
 
 // --- Configuration ---
-const GALLERY_ROOT_DIR = path.join(__dirname, '..', 'frontend', 'public', 'images', 'gallery');
-const OUTPUT_FILE_PATH = path.join(__dirname, '..', 'frontend', 'src', 'data', 'galleryEvents.js');
+const GALLERY_ROOT_DIR = path.join(__dirname, '..', 'public', 'images', 'gallery');
+const OUTPUT_FILE_PATH = path.join(__dirname, '..', 'src', 'data', 'galleryEvents.js');
 
 const IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.bmp', '.tiff'];
 
@@ -205,4 +205,4 @@ export default galleryEvents;
     }
 }
 
-frontend/scripts/generateGalleryData();
+generateGalleryData();

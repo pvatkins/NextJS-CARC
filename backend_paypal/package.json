@@ -1,17 +1,19 @@
 {
   "name": "paypal-standard-integration",
-  "description": "Sample Node.mjs web app to integrate PayPal Standard Checkout for online payments",
+  "description": "Sample Node.js web app to integrate PayPal Standard Checkout for online payments",
   "version": "1.0.0",
-  "main": "server/server.mjs",
+  "main": "dist/server/server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/server.mjs",
-    "prod": "node server/server.mjs",
-    "format": "npx prettier --write **/*.{mjs,md}",
-    "format:check": "npx prettier --check **/*.{mjs,md}",
-    "lint": "npx eslint server/*.mjs --env=node && npx eslint client/*.js --env=browser",
-    "start_prod": "pm2 start ecosystem.config.mjs --env production"
+    "build": "tsc",                                
+    "start": "node dist/server/server.js",         
+    "dev": "ts-node-dev --respawn --transpile-only server/server.ts", 
+    "prod": "node dist/server/server.js",
+    "clean": "rm -rf dist",
+    "format": "npx prettier --write **/*.{ts,tsx,js,mjs,md}",
+    "format:check": "npx prettier --check **/*.{ts,tsx,js,mjs,md}",
+    "lint": "eslint \"server/**/*.{ts,js,mjs}\" --env=node && eslint \"client/**/*.{ts,js}\" --env=browser",
+    "start_prod": "pm2 start ecosystem.config.cjs --env production"
   },
   "license": "Apache-2.0",
   "dependencies": {
@@ -20,7 +22,16 @@
     "express": "^4.19.2",
     "liquidjs": "^10.9.4",
     "mysql": "^2.18.1",
-    "node-fetch": "^3.3.2",
-    "typescript": "^5.2.2"
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3",
+    "eslint": "^9.9.0",
+    "prettier": "^3.3.3"
   }
 }
+

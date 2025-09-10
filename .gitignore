@@ -43,3 +43,19 @@ out/
 
 # Temporary files
 *.tmp
+
+# Build outputs within subdirectories if they exist and are not committed
+/frontend/.next/
+/backend/build/
+/backend/dist/
+/backend_paypal/build/
+/backend_paypal/dist/
+
+# Temporary files
+*.tmp
+*.tsbuildinfo
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
