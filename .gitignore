@@ -7,6 +7,9 @@ node_modules
 # Generated files
 galleryEvents.js
 
+# Videos
+*.mp4
+
 # Environment variables
 .env
 .env.local
