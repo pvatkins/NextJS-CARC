@@ -1,0 +1,40 @@
+# Ensure consistent line endings across OS
+* text=auto eol=lf
+
+# Treat JavaScript/TypeScript/JSON/YAML/Markdown files as text
+*.js    text
+*.jsx   text
+*.ts    text
+*.tsx   text
+*.json  text
+*.yml   text
+*.yaml  text
+*.md    text
+
+# Treat CSS files as text
+*.css   text
+
+# Treat shell and config files as text
+*.sh    text eol=lf
+*.env   text eol=lf
+
+# Treat lock files as text (normalize to LF)
+package-lock.json text eol=lf
+yarn.lock         text eol=lf
+pnpm-lock.yaml    text eol=lf
+
+# Binary files - do not modify line endings
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.svg   binary
+*.mp4   binary
+*.mov   binary
+*.mp3   binary
+*.wav   binary
+*.ttf   binary
+*.woff  binary
+*.woff2 binary

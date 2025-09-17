@@ -1,8 +1,7 @@
-link// frontend/src/app/newsletter/page.js
+// frontend/src/app/newsletter/page.js
 
 import Link from 'next/link';
-import newslettersData from '@/data/newsletters'; // Adjust path if needed
-
+import newslettersData from '../../data/newsletters';
 export const metadata = {
   title: 'CARC Newsletters',
   description: 'Access the latest and archived newsletters from the Coastside Amateur Radio Club (CARC).',

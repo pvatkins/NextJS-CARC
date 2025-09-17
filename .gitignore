@@ -6,6 +6,7 @@ node_modules
 
 # Generated files
 galleryEvents.js
+newsletter-report.txt
 
 # Videos
 *.mp4
@@ -14,11 +15,9 @@ galleryEvents.js
 .env
 .env.local
 .env.development
-.env.development.local
 .env.production
-.env.production.local  
 .env.test
-.env.test.local
+.env.*.local
 
 #Node.js
 /node_modules
@@ -35,6 +34,9 @@ out/
 
 #Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 #VScode
 .vscode/
@@ -43,6 +45,9 @@ out/
 /frontend/.next/
 /backend/build/ # or whatever the backend build output directory is
 /backend_paypal/build/ # or whatever the backend_paypal build output directory is
+.next/
+out/
+dist/
 
 # Temporary files
 *.tmp

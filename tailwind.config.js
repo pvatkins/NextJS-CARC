@@ -1,14 +1,14 @@
-// This is the Tailwind CSS configuration file
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./frontend/src/app/**/*.{js,ts,jsx,tsx}",
+    "./frontend/src/components/**/*.{js,ts,jsx,tsx}",
+    "./frontend/src/pages/**/*.{js,ts,jsx,tsx}",
+    "./frontend/src/styles/**/*.{css}" // include if you keep styles here
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'carc-background': "url('/images/misc/zz_bg_20.gif')",
-      },
-    },
+    extend: {},
   },
   plugins: [],
-}
+};

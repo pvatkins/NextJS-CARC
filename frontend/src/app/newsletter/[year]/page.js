@@ -2,7 +2,7 @@
 
 // import React from 'react';   // Import React if you are using React features directly
 import Link from 'next/link';
-import newslettersData from '@/data/newsletters'; // Adjust path if needed
+import newslettersData from '../../../data/newsletters'; // Adjust path if needed
 import { notFound } from 'next/navigation'; // For handling invalid years
 
 // This function tells Next.js which dynamic paths to pre-render at build time.

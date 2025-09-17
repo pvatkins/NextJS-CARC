@@ -1,0 +1,14 @@
+/* frontend/src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .yarl__captions_title {
+    @apply font-semibold text-lg text-gray-900;
+  }
+
+  .yarl__captions_description {
+    @apply text-sm text-gray-600 italic;
+  }
+}
